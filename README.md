@@ -1,31 +1,13 @@
----
+# DSharpPLus Template
 
-# [DSharpPlus](https://dsharpplus.github.io/DSharpPlus/) Bot Template
-
-This repository provides a template for creating a Discord bot using DSharpPlus in C#. It includes a basic setup for handling commands and events. 
-
-## Project Structure
-
-The project is structured as follows:
-
-```
-/DSharpPlusTemplate
-│
-├── /Features
-│   ├── CommandsModule.cs      # Contains command handlers for the bot
-│   └── EventsModule.cs        # Contains event handlers for the bot
-│
-├── appsettings.json           # Configuration file for bot token and other settings
-├── Program.cs                 # Entry point of the application, sets up and runs the bot
-└── ArtcordAdminBot.csproj     # Project file, includes dependencies and build settings
-```
+This project is made using C# and [DSharpPlus](https://dsharpplus.github.io/DSharpPlus/).
 
 ## Setup
 
 1. **Clone the Repository:**
    ```sh
-   git clone <repository-url>
-   cd DSharpPlusTemplate
+   git clone https://github.com/SniffBakaSniff/DSharpPLusTemplate
+   cd DSharpPLusTemplate
    ```
 
 2. **Install Dependencies:**
@@ -35,15 +17,17 @@ The project is structured as follows:
    ```sh
    sudo pacman -S dotnet-sdk
    ```
+   
+   For Windows:
+   
+   [Download here](https://dotnet.microsoft.com/en-us/download)
 
-3. **Configure Your Bot Token:**
-   Update `appsettings.json` with your bot's token:
-   ```json
-   {
-     "Token": "YOUR_BOT_TOKEN_HERE"
-   }
-   ```
-   You can get it from the [Discord Dev Portal](https://discord.com/developers/applications)
+3. **Configure your bot's token:**
+   Create an environment variable named "DISCORD_TOKEN" in your system, with the value being your bot's token.	 
+
+   In Windows this can be done by searching for "Edit the system environment variables", and in the window that pops up pressing "Environment variables...", "New..." and putting in the information.
+
+   In Linux run the command ```export DISCORD_TOKEN=[your bot's token here]``` (Example: ```export DISCORD_TOKEN=1234567890```)
 
 4. **Build the Project:**
    ```sh
@@ -55,14 +39,7 @@ The project is structured as follows:
    dotnet run
    ```
 
-## Features
-
-- **CommandsModule.cs:**
-  - Contains the `CommandsModule` class with example commands (`/ping` and `/echo`).
-  - Commands support optional parameters for sending responses as embedded messages or plain text.
-
-- **EventsModule.cs:**
-  - Contains the `EventsModule` class with an example event handler for when the bot is ready.
+Alternatively, you can open the project using [Visual Studio](https://visualstudio.microsoft.com/), which will handle everything except for step 1 and 3 for you. 
 
 ## License
 
